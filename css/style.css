@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html {
+    font-size: 62.5%;
+    /* Ta có thể chỉnh từ 10px sang 62.5% (16px*62.5% = 10px). */
+}
+
+body {
+    font-family: var(--fontRoboto);
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --primary-color: #059154;
+    --second-color: #d94737;
+    --third-color: #eeeeee;
+    --blur: #5eb891;
+    --border: #e1e1e1;
+    --fontRoboto: 'Roboto', sans-serif;
+    --fontBaloo: 'Baloo Tammudu 2', cursive;
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.font--bold {
+    font-family: var(--fontRoboto);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* ---- Menu ---- */
+.nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: inherit;
+    height: 3.5rem;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.nav__brand {
+    float: left;
+    width: 10.5rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
+}
+
+.logo {
+    position: relative;
+    font-family: var(--fontBaloo);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    height: 1.8rem;
+    width: 0.2rem;
+    right: 0;
+    transform: translateX(1.5rem);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.nav__list {
+    font-family: var(--fontRoboto);
+    list-style-type: none;
+    height: inherit;
+    overflow: hidden;
+}
+
+.nav__item {
+    float: left;
+    height: inherit;
+}
+.nav__item a {
+    display: block;
+    color: white;
+    height: inherit;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+}
+
+.nav__item i {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nav__item--active {
+    background-color: var(--second-color);
+}
+
+/* ---- dropdown ---- */
+.nav__item:first-child:hover .dropdown {
+    display: block;
+}
+.dropdown {
+    width: max-content;
+    color: black;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid gainsboro;
+    position: absolute;
+    top: 0;
+    transform: translate(30px, 45px);
+    display: none;
+}
+
+.dropdown-item a {
+    font-family: var(--fontRoboto);
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: start;
+    color: black;
+}
+
+.dropdown-item i {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+.dropdown-item a:hover {
+    background-color: var(--border);
+}
+
+/* ---- Container ---- */
+.container {
+    width: 83rem;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+/* ---- About ---- */
+.about {
+    width: inherit;
+    height: 14rem;
+}
+
+.about__avatar {
+    width: 9rem;
+    height: 9rem;
+    margin: 1rem auto;
+}
+
+.about__avatar img {
+    display: block;
+    width: inherit;
+    height: inherit;
+    border-radius: 9rem;
+}
+
+.about__name {
+    font-family: var(--fontRoboto);
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.about__status {
+    width: max-content;
+    margin: 1rem auto;
+}
+
+.about__status select {
+    width: 9rem;
+    height: 2rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 1.5rem;
+    color: var(--primary-color);
+    outline: none;
+    padding-left: 1rem;
+}
+
+.about__status--title {
+    padding-right: 1.4rem;
+}
+
+/* ---- Result Work------ */
+.r-work {
+    width: inherit;
+    height: 19.5rem;
+    border: 3px solid var(--border);
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+}
+
+.box--heading {
+    border: 3px solid var(--border);
+    width: max-content;
+    padding: 0.5rem 1rem;
+    margin-left: 2rem;
+}
+
+/* ---- Option reuse ---- */
+.option {
+    margin: 1rem 2rem;
+}
+
+.option__btn {
+    font-family: var(--fontRoboto);
+    width: max-content;
+    height: max-content;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 1rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.option--active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.r-work__data {
+    width: calc(83rem - 4rem);
+    margin: auto;
+    border: 1px solid var(--border);
+    font-family: var(--fontRoboto);
+}
+
+.r-work__data tr th {
+    height: 2.5rem;
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: 700;
+    width: calc(780px/10);
+    line-height: 1.2;
+    border: 1px solid var(--border);
+}
+
+.r-work__data tr td {
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    height: 2.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.r-work__total {
+    width: calc(83rem - 4rem);
+    margin: auto;
+    margin-top: 1.5rem;
+    border: 1px solid var(--border);
+    font-family: var(--fontRoboto);
+}
+
+.r-work__total a {
+    color: var(--primary-color);
+}
+
+.r-work__total th {
+    position: relative;
+    width: calc(78rem/5);
+    height: 2.5rem;
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.r-work__total th::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 1px;
+    height: 3.5rem;
+    background-color: var(--border);
+}
+
+.r-work__total th:first-child::before {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.r-work__total th:last-child::before {
+    width: 0;
+}
+
+.r-work__total tr td {
+    height: 2.5rem;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ---- Reuse------- */
+.align {
+    position: relative;
+    margin-top: 2.5rem;
+    width: 40rem;
+    height: 43rem;
+    border-radius: 0.5rem;
+    border: 3px solid var(--border);
+}
+
+/* ---- Job Information ----  */
+.info {
+    float: left;
+    margin-bottom: 5rem;
+    font-family: var(--fontRoboto);
+}
+
+.info__container {
+    width: inherit;
+    padding-left: 2rem;
+}
+
+.info__show {
+    margin-bottom: 1rem;
+    width: max-content;
+}
+
+.info__show:first-child {
+    margin-top: 2rem;
+}
+
+.info__title {
+    display: inline-block;
+    width: 10rem;
+}
+
+.info__title:nth-child(3) {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info__title--last {
+    width: 12rem;
+    padding: 1rem 0;
+}
+
+.info__show input {
+    width: 25rem;
+    height: 2rem;
+    border: none;
+    margin-left: 1rem;
+    background-color: #efefef;
+}
+
+.info__show input::placeholder {
+    color: black;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.info__search {
+    font-weight: 500;
+}
+
+.info__search--from input {
+    width: 10.5rem;
+    height: 2rem;
+    margin: 1rem;
+    border: 1px solid var(--border);
+}
+
+.info__btn {
+    width: max-content;
+    height: max-content;
+    padding: 0.4rem;
+    border: 0.5px solid #cacaca;
+    border-radius: 1rem;
+    background-color: white;
+    color: #cacaca;
+    margin-left: 0.2rem;
+}
+
+.info__btn--active {
+    background-color: #6fbf9c;
+    color: white;
+    border: none;
+}
+
+/* ------ history ------ */
+.history {
+    float: right;
+}
+
+.history-container {
+    width: inherit;
+    height: 35rem;
+    overflow: auto;
+}
+
+.history-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.history-container::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+}
+
+.history__table {
+    margin-left: 2rem;
+    width: 35.5rem;
+    font-size: 1rem;
+    font-family: var(--fontRoboto);
+}
+
+.history__table tr th {
+    height: 2rem;
+    text-align: start;
+    vertical-align: middle;
+}
+
+.col__title {
+    font-weight: bold;
+    height: 2rem;
+    vertical-align: middle;
+}
+
+.row__date {
+    padding-left: 1rem;
+}
+
+.row__desc {
+    padding-left: 5.5rem;
+}
+
+/* -----Modal----- */
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    margin: 10rem auto;
+    width: 32rem;
+    height: 15rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    font-family: var(--fontRoboto);
+}
+
+.modal__title {
+    width: inherit;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    padding-top: 1rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+.modal__date {
+    width: max-content;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.modal__date input {
+    width: 14rem;
+    height: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    outline: none;
+}
+
+.modal__date input::placeholder {
+    font-size: 1rem;
+    padding-left: 1rem;
+    color: var(--border);
+}
+
+.modal__container {
+    width: 20rem;
+    margin: auto;
+}
+
+.modal__btn {
+    margin-bottom: 0.5rem;
+    font-family: var(--fontRoboto);
+    width: 20rem;
+    height: 2.5rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #aaaaaa;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.modal__btn--accept{
+    background-color: var(--blur);
+}
+
+
+/* ---- Check Box ---- */
+.info__screen {
+    /* border: 1px solid black; */
+    height: 1.5rem;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.info__screen input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgb(204, 202, 202);
+}
+
+.info__screen input:checked~.checkmark {
+    background-color: var(--blur);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.info__screen input:checked~.checkmark:after {
+    display: block;
+}
+
+.info__screen .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+.info__screen--avatar {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--border);
+    border-radius: 50%;
+}
+
+.p-left {
+    padding-left: 1.5rem;
+}
