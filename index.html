@@ -7,82 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MVP-Moshop</title>
     <!-- Style CSS -->
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
-    <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/themify-icons/themify-icons.css">
 
 </head>
 
 <body>
-    <!-- ---- Modal Option ---- -->
+    <!-- ==== Modal Option ==== -->
     <div id="myModal">
         <div class="modal">
             <p class="modal__title">Tùy chọn</p>
             <div class="modal__date">
-                <input placeholder="Chọn ngày bắt đầu" class="textbox-n" type="text" onfocus="(this.type='date')"
-                    onblur="(this.type='text')" id="date" />
-                <input placeholder="Chọn ngày kết thúc" class="textbox-n" type="text" onfocus="(this.type='date')"
-                    onblur="(this.type='text')" id="date" />
+                <input placeholder="Chọn ngày bắt đầu"  type="text" onfocus="(this.type='date')"
+                    onblur="(this.type='text')" id="dateStart" />
+                <input placeholder="Chọn ngày kết thúc" type="text" onfocus="(this.type='date')"
+                    onblur="(this.type='text')" id="dateEnd" />
             </div>
             <div class="modal__container">
-                <button class="modal__btn modal__btn--accept">Xác nhận</button>
-                <button class="modal__btn" onclick="exit()">Hủy bỏ</button>
+                <button disabled class="modal__btn modal__btn--accept">Xác nhận</button>
+                <button class="modal__btn modal__btn--exit" onclick="exit()">Hủy bỏ</button>
             </div>
         </div>
     </div>
-    <!-- ---- Content ---- -->
+    <!-- ==== Content ==== -->
     <div class="wrapper">
-        <!-- Start Navbar -->
+        <!-- ==== Navbar ==== -->
         <nav class="nav">
             <div class="nav__brand">
                 <a href="" class="logo">moshop</a>
             </div>
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#">0983112233<i class="fas fa-chevron-down"></i></a>
+                    <a href="#">0983112233<i class="ti-angle-right"></i></a>
                     <ul class="dropdown">
                         <li class="dropdown-item">
-                            <a href="#"><i class="fas fa-user-alt"></i>Thông tin khách hàng</a>
+                            <a href="#"><i class="ti-github"></i>Thông tin khách hàng</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="#"> <i class="fas fa-info-circle"></i>Thông tin cửa hàng</a>
+                            <a href="#"> <i class="ti-info-alt"></i>Thông tin cửa hàng</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="#"><i class="fas fa-tag"></i>Quản lý tag</a>
+                            <a href="#"><i class="ti-tag"></i>Quản lý tag</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="#"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
+                            <a href="#"><i class="ti-share-alt"></i>Đăng xuất</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav__item"><a href=""><i class="far fa-comment-dots"></i>Chats</a></li>
-                <li class="nav__item"> <a href=""><i class="fab fa-dropbox"></i>Kho và sản phẩm</a> </li>
-                <li class="nav__item"><a href=""><i class="fas fa-book-dead"></i>Đơn hàng</a> </li>
+                <li class="nav__item"><a href=""><i class="ti-themify-favicon"></i>Chats</a></li>
+                <li class="nav__item"> <a href=""><i class="ti-package"></i>Kho và sản phẩm</a> </li>
+                <li class="nav__item"><a href=""><i class="ti-clipboard"></i>Đơn hàng</a> </li>
                 <li class="nav__item nav__item--active">
-                    <a href=""><i class="fas fa-upload"></i>Đăng đơn</a>
+                    <a href=""><i class="ti-export"></i>Đăng đơn</a>
                 </li>
             </ul>
         </nav>
-        <!-- End Navbar -->
+        <!-- ==== About ==== -->
+        <section class="about">
+            <div class="about__avatar">
+                <img src="images/avata.jpg" alt="avatar">
+            </div>
+            <h1 class="about__name">Nguyễn Ngọc Khánh / 0983112233</h1>
+            <div class="about__status">
+                <span class="about__status--title font--bold">Trạng thái</span>
+                <select class="">
+                    <option value="">Đang làm việc</option>
+                    <option value="">Đang nghỉ</option>
+                    <option value="">Đang ghét</option>
+                </select>
+            </div>
+        </section>
+        <!-- ==== Container ==== -->
         <div class="container">
-            <!-- About -->
-            <section class="about">
-                <div class="about__avatar">
-                    <img src="images/avata.jpg" alt="avatar">
-                </div>
-                <p class="about__name">Nguyễn Ngọc Khánh / 0983112233</p>
-                <div class="about__status">
-                    <span class="about__status--title font--bold">Trạng thái</span>
-                    <select class="">
-                        <option value="">Đang làm việc</option>
-                        <option value="">Đang nghỉ việc</option>
-                        <option value="">Đang ghét việc</option>
-                    </select>
-                </div>
-            </section>
-            <!-- Work Results -->
+            <!-- ==== Work Results ==== -->
             <fieldset class="r-work">
                 <legend class="box--heading font--bold">Kết quả công việc</legend>
                 <div class="option">
@@ -133,103 +132,105 @@
                     </tr>
                 </table>
             </fieldset>
-            <!-- Information Job  -->
+            <!-- ==== Information Job ==== -->
             <fieldset class="info align">
                 <legend class="box--heading font--bold">Thông tin công việc</legend>
-                <div class="info__container">
-                    <div class="info__show">
-                        <p class="info__title font--bold">Ngày bắt đầu làm việc</p>
-                        <input disabled placeholder="14/02/2018" class="textbox-n" type="text"
-                            onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
+                <div class="info__show">
+                    <p class="info__title font--bold">Ngày bắt đầu làm việc</p>
+                    <input placeholder="14/02/2018" type="text" onfocus="(this.type='date')"
+                    onblur="(this.type='text')">
+                </div>
+                <div class="info__show">
+                    <p class="info__title font--bold">Nơi làm việc</p>
+                    <input type="text" placeholder="58 Phan Huy Tuong">
+                </div>
+                <p class="info__title font--bold">Thời gian làm việc</p>
+                <div class="info__search">
+                    <div class="info__search--from">
+                        <span>1. Từ</span>
+                        <input type="time">
+                        <span>đến</span>
+                        <input type="time">
                     </div>
-                    <div class="info__show">
-                        <p class="info__title font--bold">Nơi làm việc</p>
-                        <input disabled placeholder="56 Phan Huy Tưởng" class="textbox-n" type="text"
-                            onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
+                    <div class="info__search--timeline">
+                        <span>Lặp lại</span>
+                        <button class="info__btn info__btn--active">Thứ 2</button>
+                        <button class="info__btn">Thứ 3</button>
+                        <button class="info__btn">Thứ 4</button>
+                        <button class="info__btn">Thứ 5</button>
+                        <button class="info__btn info__btn--active">Thứ 6</button>
+                        <button class="info__btn">Thứ 7</button>
+                        <button class="info__btn">Chủ nhật</button>
                     </div>
-                    <p class="info__title font--bold">Thời gian làm việc</p>
-                    <div class="info__search">
-                        <div class="info__search--from">
-                            <span>1. Từ</span>
-                            <input type="time">
-                            <span>đến</span>
-                            <input type="time">
-                        </div>
-                        <div class="info__search--timeline">
-                            <span>Lặp lại</span>
-                            <button class="info__btn info__btn--active">Thứ 2</button>
-                            <button class="info__btn">Thứ 3</button>
-                            <button class="info__btn">Thứ 4</button>
-                            <button class="info__btn">Thứ 5</button>
-                            <button class="info__btn info__btn--active">Thứ 6</button>
-                            <button class="info__btn">Thứ 7</button>
-                            <button class="info__btn">Chủ nhật</button>
-                        </div>
+                </div>
+                <div class="info__search">
+                    <div class="info__search--from">
+                        <span>2. Từ</span>
+                        <input type="time">
+                        <span>đến</span>
+                        <input type="time">
                     </div>
-                    <div class="info__search">
-                        <div class="info__search--from">
-                            <span>2. Từ</span>
-                            <input type="time">
-                            <span>đến</span>
-                            <input type="time">
-                        </div>
-                        <div class="info__search--timeline">
-                            <span>Lặp lại</span>
-                            <button class="info__btn">Thứ 2</button>
-                            <button class="info__btn info__btn--active">Thứ 3</button>
-                            <button class="info__btn">Thứ 4</button>
-                            <button class="info__btn">Thứ 5</button>
-                            <button class="info__btn">Thứ 6</button>
-                            <button class="info__btn">Thứ 7</button>
-                            <button class="info__btn">Chủ nhật</button>
-                        </div>
+                    <div class="info__search--timeline">
+                        <span>Lặp lại</span>
+                        <button class="info__btn">Thứ 2</button>
+                        <button class="info__btn info__btn--active">Thứ 3</button>
+                        <button class="info__btn">Thứ 4</button>
+                        <button class="info__btn">Thứ 5</button>
+                        <button class="info__btn">Thứ 6</button>
+                        <button class="info__btn">Thứ 7</button>
+                        <button class="info__btn">Chủ nhật</button>
                     </div>
+                </div>
 
-                    <p class="info__title info__title--last font--bold">Màn hình được sử dụng</p>
-                    <label class="info__screen">
-                        <span>Chats (Chats và chốt đơn)</span>
+                <p class="info__title info__title--last font--bold">Màn hình được sử dụng</p>
+                <div class="info__screen">
+                    <label class="info__screen--item p-top">
+                        Chats (Chats chốt đơn)
                         <input type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                     </label>
-                    <div class="p-left">
-                        <label class="info__screen">
-                            <div class="info__screen--avatar"></div>
-                           4587
+                    <div class="info--child">
+                        <label class="info__screen--item">
+                            <img src="./images/avatar.jpg" alt="">
+                            4587
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="info__screen--item">
+                            <img src="./images/avatar.jpg" alt="">
+                            Tạp chí BDS Nha Trang
                             <input type="checkbox" checked="checked">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="info__screen">
-                            <div class="info__screen--avatar"></div>
-                            <span>Tạp chí bất động sản Nha Trang</span>
+                        <label class="info__screen--item">
+                            <img src="./images/avatar.jpg" alt="">
+                            Vẽ vời
                             <input type="checkbox" checked="checked">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="info__screen">
-                            <div class="info__screen--avatar"></div>
-                            <span>Vẽ Vời</span>
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="info__screen">
-                            <div class="info__screen--avatar"></div>
-                            <span>Page bán hàng</span>
+                        <label class="info__screen--item">
+                            <img src="./images/avatar.jpg" alt="">
+                            Page Bán Hàng
                             <input type="checkbox" checked="checked">
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <label class="info__screen">
-                        <span>Đơn hàng (Quản lí và đăng đơn GHTK)</span>
+                    <label class="info__screen--item p-top">Đơn hàng (Quản lí và đăng đơn GHTK)
                         <input type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="info__screen">
-                        <span>Khách hàng (Quản lí và chăm sóc KH)</span>
-                        <input type="checkbox" checked="checked">
+                    <label class="info__screen--item p-top">Khách hàng (Quản lí và chăm sóc KH)
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="info__screen--item p-top">Chats (Chats chốt đơn)
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                     </label>
                 </div>
+
             </fieldset>
-            <!-- Activity History -->
+            <!-- ==== Activity History ==== -->
             <fieldset class="history align">
                 <legend class="box--heading font--bold">Lịch sử hoạt động</legend>
                 <div class="option">
